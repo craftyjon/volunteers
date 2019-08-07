@@ -55,7 +55,7 @@ class ScheduleController extends Controller
 
         if($request->input('duration') == 'custom')
         {
-            $this->validate($request, ['custom_duration' => 'required|date_format:h:i']);
+            $this->validate($request, ['custom_duration' => 'required|date_format:H:i']);
             $input['duration'] = $input['custom_duration'];
         }
 
